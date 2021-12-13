@@ -1,7 +1,7 @@
-package reghzy.packet;
+package dragonjetz.packet;
 
-import reghzy.connection.IConnection;
-import reghzy.packet.utils.PKTCreator;
+import dragonjetz.connection.IConnection;
+import dragonjetz.packet.utils.PKTCreator;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -21,15 +21,6 @@ public abstract class Packet {
         idToClass.put(id, clazz);
         classToId.put(clazz, id);
         idToCreator.put(id, creator);
-    }
-
-    public static Packet readPacketTail(int id, int len, DataInput input) throws IOException {
-        PKTCreator<? extends Packet> creator = idToCreator.get(id);
-        if (creator == null) {
-            throw new RuntimeException("Missing mapping for packet id " + id);
-        }
-
-        return creator.create(input, len);
     }
 
     public static void writePacket(Packet packet, DataOutput output) throws IOException {
@@ -61,9 +52,28 @@ public abstract class Packet {
         DataInput input = connection.getInput();
         int id = input.readUnsignedByte();
         int len = input.readUnsignedShort();
-        while (connection.getAvailableBytes() < len) { }
+        while (connection.getAvailableBytes() < len) {
+            try {
+                Thread.sleep(1);
+            }
+            catch (InterruptedException e) { }
+        }
 
         return readPacketTail(id, len, input);
+    }
+
+    public static Packet readPacketTail(int id, int len, DataInput input) throws IOException {
+        PKTCreator<? extends Packet> creator = idToCreator.get(id);
+        if (creator == null) {
+            throw new RuntimeException("Missing mapping for packet id " + id);
+        }
+
+        try {
+            return creator.create(input, len);
+        }
+        catch (Throwable e) {
+            throw new RuntimeException("Failed to create packet", e);
+        }
     }
 
     public Packet() {

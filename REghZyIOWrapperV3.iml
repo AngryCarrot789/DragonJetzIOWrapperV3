@@ -10,10 +10,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/javaStuff/jSerialComm-2.6.2.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/javaStuff/jSerialComm-2.7.0.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/javaStuff/jSerialComm-master/src/main/java" />
+          <root url="file://$USER_HOME$/Desktop/javaStuff/jSerialComm-master/src/test/java" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>

@@ -1,4 +1,4 @@
-package reghzy.serial;
+package dragonjetz.serial;
 
 import com.fazecast.jSerialComm.SerialPort;
 

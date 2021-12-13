@@ -1,9 +1,9 @@
-package reghzy.packet.packets;
+package dragonjetz.packet.packets;
 
-import reghzy.packet.Size;
-import reghzy.packet.Packet;
-import reghzy.packet.utils.PKTCreator;
-import reghzy.packet.utils.PacketUtils;
+import dragonjetz.packet.Size;
+import dragonjetz.packet.Packet;
+import dragonjetz.packet.utils.PKTCreator;
+import dragonjetz.packet.utils.PacketUtils;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -34,6 +34,22 @@ public class Packet2AccountInfo extends Packet {
         this.age = age;
         this.married = married;
         this.childrenCount = childrenCount;
+    }
+
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public boolean isMarried() {
+        return this.married;
+    }
+
+    public int getChildrenCount() {
+        return this.childrenCount;
     }
 
     @Override

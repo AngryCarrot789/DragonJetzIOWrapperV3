@@ -1,10 +1,9 @@
-package reghzy.packet.packets;
+package dragonjetz.packet.packets;
 
-import com.sun.deploy.util.StringUtils;
 import com.sun.istack.internal.NotNull;
-import reghzy.packet.utils.PKTCreator;
-import reghzy.packet.utils.PacketUtils;
-import reghzy.packet.Packet;
+import dragonjetz.packet.utils.PKTCreator;
+import dragonjetz.packet.utils.PacketUtils;
+import dragonjetz.packet.Packet;
 
 import java.io.DataInput;
 import java.io.DataOutput;

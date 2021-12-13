@@ -1,7 +1,7 @@
-package reghzy.connection.serial;
+package dragonjetz.connection.serial;
 
 import com.fazecast.jSerialComm.SerialPort;
-import reghzy.connection.IConnection;
+import dragonjetz.connection.IConnection;
 
 import java.io.DataInput;
 import java.io.DataInputStream;

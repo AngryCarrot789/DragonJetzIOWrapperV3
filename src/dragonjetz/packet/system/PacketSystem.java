@@ -1,7 +1,7 @@
-package reghzy.packet.system;
+package dragonjetz.packet.system;
 
-import reghzy.connection.IConnection;
-import reghzy.packet.Packet;
+import dragonjetz.connection.IConnection;
+import dragonjetz.packet.Packet;
 
 import java.io.IOException;
 
@@ -23,7 +23,12 @@ public class PacketSystem<T extends IConnection> {
 
     public Packet readPacket() {
         IConnection connection = this.connection;
-        while(connection.getAvailableBytes() < 3) { }
+        while(connection.getAvailableBytes() < 3) {
+            try {
+                Thread.sleep(1);
+            }
+            catch (InterruptedException e) { }
+        }
 
         try {
             return Packet.readPacketHeadAndTail(this.connection);
