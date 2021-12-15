@@ -1,9 +1,9 @@
-package dragonjetz.packet.packets;
+package reghzy.packet.packets;
 
-import dragonjetz.packet.Size;
-import dragonjetz.packet.Packet;
-import dragonjetz.packet.utils.PKTCreator;
-import dragonjetz.packet.utils.PacketUtils;
+import reghzy.packet.Size;
+import reghzy.packet.Packet;
+import reghzy.packet.utils.PKTCreator;
+import reghzy.packet.utils.PacketUtils;
 
 import java.io.DataInput;
 import java.io.DataOutput;

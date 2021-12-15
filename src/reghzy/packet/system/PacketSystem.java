@@ -1,7 +1,7 @@
-package dragonjetz.packet.system;
+package reghzy.packet.system;
 
-import dragonjetz.connection.IConnection;
-import dragonjetz.packet.Packet;
+import reghzy.connection.IConnection;
+import reghzy.packet.Packet;
 
 import java.io.IOException;
 

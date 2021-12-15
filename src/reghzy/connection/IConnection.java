@@ -1,4 +1,4 @@
-package dragonjetz.connection;
+package reghzy.connection;
 
 import java.io.DataInput;
 import java.io.DataOutput;

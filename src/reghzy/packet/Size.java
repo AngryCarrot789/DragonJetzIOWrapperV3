@@ -1,4 +1,4 @@
-package dragonjetz.packet;
+package reghzy.packet;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

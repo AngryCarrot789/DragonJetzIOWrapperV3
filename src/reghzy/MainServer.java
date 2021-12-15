@@ -1,12 +1,12 @@
-package dragonjetz;
+package reghzy;
 
 import com.fazecast.jSerialComm.SerialPort;
-import dragonjetz.connection.serial.SerialConnection;
-import dragonjetz.packet.Packet;
-import dragonjetz.packet.packets.Packet1Chat;
-import dragonjetz.packet.packets.Packet2AccountInfo;
-import dragonjetz.packet.system.PacketSystem;
-import dragonjetz.packet.utils.PacketUtils;
+import reghzy.connection.serial.SerialConnection;
+import reghzy.packet.Packet;
+import reghzy.packet.packets.Packet1Chat;
+import reghzy.packet.packets.Packet2AccountInfo;
+import reghzy.packet.system.PacketSystem;
+import reghzy.packet.utils.PacketUtils;
 
 import java.text.MessageFormat;
 

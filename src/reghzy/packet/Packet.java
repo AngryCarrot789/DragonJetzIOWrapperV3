@@ -1,7 +1,7 @@
-package dragonjetz.packet;
+package reghzy.packet;
 
-import dragonjetz.connection.IConnection;
-import dragonjetz.packet.utils.PKTCreator;
+import reghzy.connection.IConnection;
+import reghzy.packet.utils.PKTCreator;
 
 import java.io.DataInput;
 import java.io.DataOutput;

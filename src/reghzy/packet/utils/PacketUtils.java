@@ -1,6 +1,6 @@
-package dragonjetz.packet.utils;
+package reghzy.packet.utils;
 
-import dragonjetz.packet.Packet;
+import reghzy.packet.Packet;
 
 import java.io.DataInput;
 import java.io.DataOutput;
